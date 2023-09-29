@@ -105,5 +105,9 @@ MERGE (m)-[r:SUB_ACTIVITY]->(n)
 set n:Activity_3
 ;
 
+match (i:Item)
+where i.text<>''
+    detach delete i;
+
 
 
